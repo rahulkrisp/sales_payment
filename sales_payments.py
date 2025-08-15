@@ -6,12 +6,9 @@ import datetime
 from dotenv import load_dotenv
 import os
 
-# Load .env file
-load_dotenv()
 
-
-api_key = os.getenv("MIXPANEL_API_KEY") or st.secrets.get("MIXPANEL_API_KEY")
-project_id = os.getenv("MIXPANEL_PROJECT_ID") or st.secrets.get("MIXPANEL_PROJECT_ID")
+api_key = st.secrets["MIXPANEL_API_KEY"]
+project_id = st.secrets["MIXPANEL_PROJECT_ID"]
 
 
 st.title("Sales Payment Data")
